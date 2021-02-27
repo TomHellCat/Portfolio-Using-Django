@@ -1,0 +1,76 @@
+{% extends 'base/header.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Nav -->
+<nav id="nav">
+	<ul class="links">
+		<li ><a href="{%url 'base:index'%} ">My Projects</a></li>
+		<li class="active"><a href="{%url 'base:aboutme'%} ">About Me</a></li>
+	</ul>
+	<ul class="icons">
+		<li><a href="https://github.com/TomHellCat/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+	</ul>
+</nav>
+
+<div id="main">
+	<!-- Post -->
+		<section class="post">
+			<header class="major">
+				<h1>About Me</h1>
+				<p>I am self taught juniour software developer who learns things by making ugly prototypes</p>
+			</header>	
+		</section>
+
+		<section class="post">
+			<header class="major">
+				<h1>Skills</h1>
+				<ul class = "action">
+					<li>Unity3d,C#</li>
+					<li>C/C++</li>
+					<li>Python, Django</li>
+					<li>HTML, CSS, Javascript</li>
+				</ul>
+			</header>		
+		</section>
+</div>
+<!-- Footer -->
+<footer id="footer">
+	<section>
+		<form method="post" action="{%url 'base:get_name' %}">
+			{% csrf_token %}
+			<div class="fields">
+				<div class="field">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" /> 
+					
+				</div>
+				<div class="field">
+					<label for="email">Email</label>
+					<input type="text" name="email" id="email" />
+				</div>
+				<div class="field">
+					<label for="message">Message</label>
+					<textarea name="message" id="message" rows="3"></textarea>
+				</div>
+			</div>
+			<ul class="actions">
+				<li><input type="submit" value="Send Message" /></li>
+			</ul>
+		</form>
+	</section>
+	<section class="split contact">
+		
+		<section>
+			<h3>Email</h3>
+			<p><a href="#">abelhevero@gmail.com</a></p>
+		</section>
+		<section>
+			<h3>Social</h3>
+			<ul class="icons alt">
+				<li><a href="https://github.com/TomHellCat/" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+		</section>
+	</section>
+</footer>
+{% endblock %}

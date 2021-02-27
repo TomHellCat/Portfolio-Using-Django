@@ -1,0 +1,95 @@
+{% extends 'base/header.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Nav -->
+<nav id="nav">
+	<ul class="links">
+		<li class="active"><a href="{%url 'base:index'%} ">My Projects</a></li>
+		<li ><a href="{%url 'base:aboutme'%} ">About Me</a></li>
+	</ul>
+	<ul class="icons">
+		<li><a href="https://github.com/TomHellCat/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+	</ul>
+</nav>
+
+<div id="main">
+
+	<!-- Featured Post -->
+		<article class="post featured">
+			<header class="major">
+				
+				<h2>YouTube Sentiment Analysis</h2>
+				<p>This is a webapp built using Django. It allows you to find how popular a product or a person is by finding all the videos mentioning that product or person and doing a sentiment analysis on the video titles and looking at the like to dislike ratio of those vidoes.</p>
+			</header>
+			<a href="https://github.com/TomHellCat/YouTube-Sentiment-Analysis" class="image main"><img src="{% static 'images/Yt1.png' %}" alt="" /></a>
+			<ul class="actions special">
+				<li><a href="https://github.com/TomHellCat/YouTube-Sentiment-Analysis" class="button large">GitHub</a></li>
+			</ul>
+
+		</article>
+
+	<!-- Posts -->
+		<section class="posts">
+			<article>
+				<header>
+					
+					<h2>Panzer Fight</h2>
+				</header>
+				<a href="https://github.com/TomHellCat/Panzer-Fight/tree/master" class="image fit"><img src="{% static 'images/panzer fight1.png' %}" alt="" width="580" height="310"/></a>
+				<p>This is a tank shooting game built using Unity game engine. You play as a tank and must destroy all the enemies. Try to survive as long as possible.</p>
+				<br>
+				<ul class="actions special">
+					<li><a href="https://github.com/TomHellCat/Panzer-Fight/tree/master" class="button">Github</a></li>
+				</ul>
+			</article>
+			<article>
+				<header>
+					
+					<h2>Correlator</h2>
+				</header>
+				<a href="https://github.com/TomHellCat/CorrelatorV2" class="image fit"><img src="{%static 'images/correlator1.png' %}" alt="" width="580" height="310"/></a>
+				<p>This is an app for viewing and analysing csv files. It allows you to run linear regression algorithm on the dataset you are looking at, train a model and generate prediction data.</p>
+				<ul class="actions special">
+					<li><a href="https://github.com/TomHellCat/CorrelatorV2" class="button">github</a></li>
+				</ul>
+			</article>
+			<article>
+				<header>
+					
+					<h2>Cubiz</h2>
+				</header>
+				<a href="https://github.com/TomHellCat/Cubiz" class="image fit"><img src="{% static 'images/cubiz.webp' %}" alt="" width="580" height="310" /></a>
+				<p>This is a hypercasual game for android built using Unity3d.</p>
+				<ul class="actions special">
+					<li><a href="https://github.com/TomHellCat/Cubiz" class="button">github</a></li>
+				</ul>
+			</article>
+			<article>
+				<header>
+					
+					<h2>Chattr</h2>
+				</header>
+				<a href="https://github.com/TomHellCat/Gui-Chatbot-" class="image fit"><img src="{% static 'images/chattr.png' %}" alt="" width="580" height="310"/></a>
+				<p>This is a GUI chatbot application. The GUI was built using Kivy.</p>
+				<ul class="actions special">
+					<li><a href="https://github.com/TomHellCat/Gui-Chatbot-" class="button">Github</a></li>
+				</ul>
+			</article>
+			
+		</section>
+
+</div>
+<footer id="footer">
+	<section>
+		<h3>Email</h3>
+		<p><a href="#">abelhevero@gmail.com</a></p>
+	
+		<h3>Social</h3>
+		<ul class="icons alt">
+			<li><a href="https://github.com/TomHellCat/" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+		</ul>
+	</section>
+</footer>
+
+{% endblock %}
